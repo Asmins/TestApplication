@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Modules/Welcome/Interactor/WelcomeInteractor.swift"
-            timestampString = "509362287.663104"
+            filePath = "TestApplication/Models/Networking/ApiService.swift"
+            timestampString = "509374917.380577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "checkAvailability()"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "apiResponseSerializer()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

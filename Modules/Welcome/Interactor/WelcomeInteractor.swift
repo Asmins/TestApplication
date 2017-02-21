@@ -11,7 +11,7 @@ import Foundation
 final class WelcomeInteractor {
 
     // MARK: - VIPER stack
-
+    var service = WelcomeService()
     weak var presenter: WelcomeInteractorOutput!
 
     // MARK: -
@@ -36,7 +36,9 @@ extension WelcomeInteractor: WelcomeInteractorInput {
         if number.characters.count < 9 {
             presenter.showAlert("Не верный лицевой счёт")
         } else {
-            print("All ok")
+            service.getInfo(number, result: { result,error in
+                print(result,error)
+            })
         }
 
         UserDefaults.standard.set(number, forKey: "number")

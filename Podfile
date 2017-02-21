@@ -6,7 +6,7 @@ target 'TestApplication' do
 pod 'IQKeyboardManagerSwift'
 pod 'Alamofire’
 pod 'SwiftyJSON'
- 
+ pod 'AFNetworking'
 end
 
 post_install do |installer|

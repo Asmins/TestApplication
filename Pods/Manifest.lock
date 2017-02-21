@@ -1,18 +1,35 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - Alamofire (4.3.0)
   - IQKeyboardManagerSwift (4.0.8)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - AFNetworking
   - Alamofire
   - IQKeyboardManagerSwift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: db617b4034c0ff87ba60ea66d6b79ebb36ad62ef
+PODFILE CHECKSUM: 80ee9acaa4c6e10356f89e9f060cb2f2c7f7d1b8
 
 COCOAPODS: 1.2.0.rc.1
