@@ -11,7 +11,8 @@ import Chamomile
 // MARK: - MainViewOutput
 
 protocol MainViewOutput: class {
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 }
 
 // MARK: - MainInteractorOutput
@@ -23,7 +24,7 @@ protocol MainInteractorOutput: class {
 // MARK: - MainModuleInput
 
 protocol MainModuleInput: ModuleInput {
-
+    func setupData(_ info: Info, counters: [Counters])
 }
 
 // MARK: - MainModuleOutput

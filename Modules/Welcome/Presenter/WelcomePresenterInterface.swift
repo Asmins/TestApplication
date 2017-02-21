@@ -11,7 +11,6 @@ import Chamomile
 // MARK: - WelcomeViewOutput
 
 protocol WelcomeViewOutput: class {
-    func showMainModule()
     func checkAvailability(_ textField: UITextField)
     func saveNumber(_ number: String)
 }
@@ -19,7 +18,10 @@ protocol WelcomeViewOutput: class {
 // MARK: - WelcomeInteractorOutput
 
 protocol WelcomeInteractorOutput: class {
+    func showMainModule(_ info: Info, counters: [Counters])
     func showAlert(_ text: String)
+    func hiddenView()
+    func showView()
 }
 
 // MARK: - WelcomeModuleInput

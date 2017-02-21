@@ -24,10 +24,7 @@ final class WelcomePresenter {
 // MARK: - WelcomeViewOutput
 
 extension WelcomePresenter: WelcomeViewOutput {
-    func showMainModule() {
-        router.showMainRouter(mainModuleOutput: self)
-    }
-
+    
     func saveNumber(_ number: String) {
         interactor.save(number)
     }
@@ -46,6 +43,18 @@ extension WelcomePresenter: WelcomeViewOutput {
 extension WelcomePresenter: WelcomeInteractorOutput {
     func showAlert(_ text: String) {
         view.showAlert(text)
+    }
+
+    func hiddenView() {
+        view.hiddenView()
+    }
+
+    func showView() {
+        view.showView()
+    }
+
+    func showMainModule(_ info: Info, counters: [Counters]) {
+        router.showMainRouter(info: info, counters: counters, mainModuleOutput: self)
     }
 }
 

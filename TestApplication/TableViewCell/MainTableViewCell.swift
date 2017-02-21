@@ -24,8 +24,8 @@ class MainTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func config(info: Info) {
-        bilLabel.text = "\(info.id)"
+    func config(_ info: Info) {
+        bilLabel.text = "\(info.id!)"
         addressLabel.text = info.address
     }
 

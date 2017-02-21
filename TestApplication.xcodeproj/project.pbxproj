@@ -22,6 +22,9 @@
 		6F2C808FA54B3ED4964337B9 /* MainAssember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E183CEE59D51F6F36FA1D /* MainAssember.swift */; };
 		815FF0C504691F0C1D4ACA70 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28060EE4595BF9737D84CC2B /* WelcomeInteractor.swift */; };
 		820B37541E5C5F8800521EA6 /* WelcomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820B37531E5C5F8800521EA6 /* WelcomeService.swift */; };
+		821B7CB41E5C9714009B3EA6 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B7CB31E5C9714009B3EA6 /* Parser.swift */; };
+		821B7CB61E5CA20A009B3EA6 /* CountersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821B7CB51E5CA20A009B3EA6 /* CountersCell.xib */; };
+		821B7CB81E5CA529009B3EA6 /* CountersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B7CB71E5CA529009B3EA6 /* CountersCell.swift */; };
 		8254167D1E5B79C200F15560 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8254167B1E5B79C200F15560 /* Main.storyboard */; };
 		825416821E5B79C200F15560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 825416801E5B79C200F15560 /* LaunchScreen.storyboard */; };
 		82B13F781E5B7EA2005A2FC0 /* Aspects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B13F751E5B7EA2005A2FC0 /* Aspects.framework */; };
@@ -62,6 +65,9 @@
 		582940C88FB536DD16358E55 /* WelcomePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 		7E57BD0234BB831475710EE2 /* MainViewInterface.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewInterface.swift; sourceTree = "<group>"; };
 		820B37531E5C5F8800521EA6 /* WelcomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeService.swift; sourceTree = "<group>"; };
+		821B7CB31E5C9714009B3EA6 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		821B7CB51E5CA20A009B3EA6 /* CountersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountersCell.xib; sourceTree = "<group>"; };
+		821B7CB71E5CA529009B3EA6 /* CountersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountersCell.swift; sourceTree = "<group>"; };
 		825416741E5B79C200F15560 /* TestApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8254167C1E5B79C200F15560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		825416811E5B79C200F15560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				820B37531E5C5F8800521EA6 /* WelcomeService.swift */,
+				821B7CB31E5C9714009B3EA6 /* Parser.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -266,6 +273,8 @@
 			children = (
 				82BFB4061E5C421E00DF61A7 /* MainCell.xib */,
 				82BFB4081E5C52B000DF61A7 /* MainTableViewCell.swift */,
+				821B7CB51E5CA20A009B3EA6 /* CountersCell.xib */,
+				821B7CB71E5CA529009B3EA6 /* CountersCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -411,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821B7CB61E5CA20A009B3EA6 /* CountersCell.xib in Resources */,
 				82B13F841E5B80A4005A2FC0 /* Info.plist in Resources */,
 				825416821E5B79C200F15560 /* LaunchScreen.storyboard in Resources */,
 				82B13F821E5B80A0005A2FC0 /* Assets.xcassets in Resources */,
@@ -493,6 +503,7 @@
 				82B13F801E5B809C005A2FC0 /* AppDelegate.swift in Sources */,
 				82F787271E5C2F3E006B102B /* SegueIndetificator.swift in Sources */,
 				253672EE88A4A789009DFB07 /* WelcomeAssember.swift in Sources */,
+				821B7CB81E5CA529009B3EA6 /* CountersCell.swift in Sources */,
 				4BF0D9E056785178EB5EF4E9 /* WelcomeViewInterface.swift in Sources */,
 				60E950DB3182E7F615DD47AB /* WelcomeViewController.swift in Sources */,
 				82BFB4021E5C355C00DF61A7 /* GreenNavController.swift in Sources */,
@@ -510,6 +521,7 @@
 				82BFB40D1E5C546200DF61A7 /* ApiService.swift in Sources */,
 				FB4190787CD152727BD2D725 /* MainViewInterface.swift in Sources */,
 				447C0982E805D47D5501A6D6 /* MainViewController.swift in Sources */,
+				821B7CB41E5C9714009B3EA6 /* Parser.swift in Sources */,
 				456F25C12BB01B00E006DBB4 /* MainInteractorInterface.swift in Sources */,
 				5C33043B34AB8C718B5B0578 /* MainInteractor.swift in Sources */,
 				925F8F5A49CC7D998083A5B2 /* MainPresenterInterface.swift in Sources */,

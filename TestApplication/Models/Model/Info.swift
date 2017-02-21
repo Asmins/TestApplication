@@ -11,11 +11,17 @@ import Foundation
 class Info {
     var id: Int!
     var address: String!
+
+    init(id: Int, address: String) {
+        self.id = id
+        self.address = address
+    }
 }
 
 class Counters {
     var title: String!
     var currentCounters: Int!
     var pastCounters: Int!
-    var numberOfCounters: Int!
+    var numberOfCounters: String!
+
 }

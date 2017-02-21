@@ -21,10 +21,10 @@ final class WelcomeRouter {
 // MARK: - WelcomeRouterInput
 
 extension WelcomeRouter: WelcomeRouterInput {
-    func showMainRouter(mainModuleOutput: MainModuleOutput) {
+    func showMainRouter(info: Info, counters: [Counters],mainModuleOutput: MainModuleOutput) {
         flowController.openModule(using: .openMainModule, completion: {
             guard let moduleInput = $0 as? MainModuleInput else { fatalError() }
-
+            moduleInput.setupData(info, counters: counters)
             return mainModuleOutput
         })
     }

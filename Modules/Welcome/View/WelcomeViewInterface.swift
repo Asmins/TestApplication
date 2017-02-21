@@ -10,4 +10,6 @@
 
 protocol WelcomeViewInput: class {
     func showAlert(_ text: String)
+    func hiddenView()
+    func showView()
 }

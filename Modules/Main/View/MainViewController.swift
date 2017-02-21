@@ -34,33 +34,19 @@ final class MainViewController: UIViewController, FlowController {
 
 extension MainViewController: MainViewInput {
     func setup(_ tableView: UITableView) {
+        tableView.allowsSelection = false
         tableView.register(UINib(nibName: "MainCell", bundle: nil), forCellReuseIdentifier: "mainCell")
-       // tableView.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellReuseIdentifier: <#T##String#>)
+        tableView.register(UINib(nibName: "CountersCell", bundle: nil), forCellReuseIdentifier: "coutersCell")
     }
 }
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        switch indexPath.section {
-        case 0:
-            let aCell = tableView.dequeueReusableCell(withIdentifier: "mainCell") as! MainTableViewCell
-            cell = aCell
-        default:
-            return cell
-        }
-        return cell
+        return presenter.tableView(tableView, cellForRowAt: indexPath)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 0
-        default:
-            return 0
-        }
+       return presenter.tableView(tableView, numberOfRowsInSection: section)
     }
 }
 
@@ -73,14 +59,12 @@ extension MainViewController: UITableViewDelegate {
         switch indexPath.section {
         case 0:
             return 100
+        case 1:
+            return 130
         default:
             return 0
         }
     }
-
-//    func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-//
-//    }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10

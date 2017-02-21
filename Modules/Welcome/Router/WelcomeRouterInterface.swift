@@ -9,5 +9,5 @@
 // MARK: - WelcomeRouterInput
 
 protocol WelcomeRouterInput: class {
-    func showMainRouter(mainModuleOutput: MainModuleOutput)
+    func showMainRouter(info: Info, counters: [Counters],mainModuleOutput: MainModuleOutput)
 }

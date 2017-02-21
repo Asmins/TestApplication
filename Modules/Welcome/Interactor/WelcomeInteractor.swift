@@ -12,6 +12,8 @@ final class WelcomeInteractor {
 
     // MARK: - VIPER stack
     var service = WelcomeService()
+    var parser = Parser()
+
     weak var presenter: WelcomeInteractorOutput!
 
     // MARK: -
@@ -36,12 +38,16 @@ extension WelcomeInteractor: WelcomeInteractorInput {
         if number.characters.count < 9 {
             presenter.showAlert("Не верный лицевой счёт")
         } else {
+            presenter.showView()
             service.getInfo(number, result: { error, result in
+                self.presenter.hiddenView()
                 if error != nil {
-                    print(error)
+                    self.presenter.showAlert("Ошибка")
                 } else {
-                    print(result)
-                }
+                    let info = self.parser.parseDataForInfo(result!)
+                    let counters = self.parser.parseMainData(result!)
+                    self.presenter.showMainModule(info, counters: counters)
+                 }
             })
         }
 

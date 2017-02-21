@@ -46,4 +46,14 @@ extension WelcomeViewController: WelcomeViewInput {
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
     }
+
+    func hiddenView() {
+        self.contentView.isHidden = true
+        self.loadingActivityIndecator.stopAnimating()
+    }
+
+    func showView() {
+        self.contentView.isHidden = false
+        self.loadingActivityIndecator.startAnimating()
+    }
 }
