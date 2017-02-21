@@ -1,0 +1,31 @@
+### Headers settings
+company: Asmin
+
+### Xcode project settings
+project_name: TestApplication
+xcodeproj_path: TestApplication.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: TestApplication
+
+# The file path for new modules
+project_file_path: /Modules/
+
+# The Xcode group path to new modules
+project_group_path: /Modules/
+
+### Dependencies settings section
+podfile_path: Podfile
+cartfile_path: Cartfile
+
+### Templates
+templates:
+#- {name: local_template_name, local: 'absolute/file/path'}
+#- {name: remote_template_name, git: 'https://github.com/igrekde/remote_template'}
+#- {name: catalog_template_name}
+
+catalogs:
+  - 'https://bitbucket.org/alextov/generamba-templates'
+templates:
+  - {name: venomancer}
