@@ -36,8 +36,12 @@ extension WelcomeInteractor: WelcomeInteractorInput {
         if number.characters.count < 9 {
             presenter.showAlert("Не верный лицевой счёт")
         } else {
-            service.getInfo(number, result: { result,error in
-                print(result,error)
+            service.getInfo(number, result: { error, result in
+                if error != nil {
+                    print(error)
+                } else {
+                    print(result)
+                }
             })
         }
 

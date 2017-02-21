@@ -47,9 +47,9 @@ extension Alamofire.DataRequest: ApiRequestProtocol {
             }
 
             do {
-                let json = try JSONSerialization.jsonObject(with: validData, options: [])
+                let result = try JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject]
                 // TODO: Should consider HTTP response as well.
-                return sanitizeError(json: JSON(json))
+                return sanitizeError(json: JSON(result))
             } catch let error as NSError {
                 return .failure(error)
             }

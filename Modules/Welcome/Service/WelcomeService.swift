@@ -18,11 +18,15 @@ class WelcomeService {
     }
 
     func getInfo(_ bil: String, result: @escaping (_ error: Error?, _ result: JSON?) -> ()) {
-
-        let _ = manager.apiRequest(.getAllInfo(bil), parameters: nil, headers: nil).apiResponse(completion: { response in
+        Alamofire.request("http://dl.erpico.ru/test.php?account=\(bil)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { response in
             switch response.result {
-            case .success(let json):
-                print(json)
+            case .success(let data):
+                do {
+                    let json = try JSONSerialization.jsonObject(with: response.data!, options: [])
+                    result(nil, JSON(json))
+                } catch {
+                    print(error)
+                }
             case .failure(let error):
                 print(error)
             }

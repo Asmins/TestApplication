@@ -5,7 +5,7 @@
 //  Created by Asmins on 21/02/2017.
 //  Copyright © 2017 Asmin. All rights reserved.
 //
-
+import Alamofire
 import Chamomile
 
 // MARK: - WelcomeViewController
@@ -32,6 +32,7 @@ final class WelcomeViewController: UIViewController, FlowController {
     }
 
     @IBAction func nextViewTap(_ sender: Any) {
+        //presenter.showMainModule()
         presenter.saveNumber(numberTextField.text!)
     }
 }
